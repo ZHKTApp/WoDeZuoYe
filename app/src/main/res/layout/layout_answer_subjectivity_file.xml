@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_answer"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_margin_150dp"
+    tools:showIn="@layout/item_subject_file">
+
+    <TextView
+        android:id="@+id/tv_analysis"
+        style="@style/text_18_wrap"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="26dp" />
+
+    <ScrollView
+        android:id="@+id/sv_subject_file"
+        android:layout_width="367dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_myanswer"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@id/tv_analysis"
+        android:background="@drawable/bg_black_frame"
+        android:padding="1dp">
+        <LinearLayout
+            android:id="@+id/ll_analysis_file"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="800dp">
+                <ImageView
+                    android:id="@+id/iv_file_detail_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <!--<WebView-->
+            <!--android:id="@+id/webView_participation_detail"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--tools:ignore="WebViewLayout" />-->
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/iv_explain_subject"
+        android:layout_width="@dimen/common_margin_27dp"
+        android:layout_height="@dimen/common_margin_27dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/common_margin_20dp"
+        android:background="@drawable/select_question" />
+    <ImageView
+        android:id="@+id/ll_item_subject_listen_subject"
+        android:layout_width="@dimen/common_margin_27dp"
+        android:layout_height="@dimen/common_margin_27dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="67dp"
+        android:background="@drawable/select_play" />
+</RelativeLayout>

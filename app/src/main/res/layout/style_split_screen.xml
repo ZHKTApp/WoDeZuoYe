@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/activity_subject_file">
+
+    <RelativeLayout
+        android:id="@+id/rl_score"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_margin_40dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            style="@style/text_18_wrap"
+            android:text="附件作业" />
+
+        <TextView
+            android:id="@+id/tv_split_score"
+            style="@style/text_18_wrap"
+            android:layout_alignParentRight="true"
+            android:text="" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_split_subject"
+        android:layout_width="635dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_score"
+        android:background="@mipmap/textbook"
+        android:visibility="gone" />
+
+    <WebView
+        android:id="@+id/webView_split_subject"
+        android:layout_width="635dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_score"
+        android:layout_marginLeft="12dp"
+        tools:ignore="WebViewLayout"></WebView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rl_subject"
+        android:layout_width="623dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_score"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/white" />
+
+    <FrameLayout
+        android:id="@+id/fl_split_unfold"
+        android:layout_width="@dimen/common_margin_40dp"
+        android:layout_height="@dimen/common_margin_37dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="9dp"
+        android:layout_toRightOf="@id/webView_split_subject"
+        android:background="@mipmap/twoselectright" />
+</RelativeLayout>

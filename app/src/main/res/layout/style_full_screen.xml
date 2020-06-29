@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_efef"
+    tools:showIn="@layout/activity_subject_file">
+
+    <RelativeLayout
+        android:id="@+id/rl_score"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_margin_40dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/text_18_wrap"
+            android:text="附件作业" />
+
+        <TextView
+            android:id="@+id/tv_full_score"
+            style="@style/text_18_wrap"
+            android:layout_alignParentRight="true"
+            android:text="共15题,5分/题,总计:75分" />
+
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webView_full_subject"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_score"
+        android:layout_margin="10dp"></WebView>
+
+    <ImageView
+        android:id="@+id/iv_full_subject"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_score"
+        android:background="@mipmap/textbook"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/fl_full_fewer"
+        android:layout_width="@dimen/common_margin_40dp"
+        android:layout_height="@dimen/common_margin_37dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="11dp"
+        android:background="@mipmap/twoselectleft" />
+</RelativeLayout>

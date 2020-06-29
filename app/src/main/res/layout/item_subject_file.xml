@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="0.5dp">
+
+    <TextView
+        android:id="@+id/tv_item_subject_type"
+        style="@style/text_18_wrap"
+        android:layout_height="@dimen/common_margin_47dp"
+        android:layout_marginLeft="17dp"
+        android:gravity="center_vertical"
+        android:text="1.单选题" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="39dp"
+        android:paddingRight="@dimen/common_margin_35dp">
+
+        <TextView
+            android:id="@+id/tv_subject_index"
+            style="@style/text_18_wrap"
+            android:text="1"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <ImageView
+            android:id="@+id/iv_explain"
+            android:layout_width="@dimen/common_margin_27dp"
+            android:layout_height="@dimen/common_margin_27dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/select_question" />
+    </RelativeLayout>
+    <!--客观题答案-->
+    <include
+        android:id="@+id/ic_answer_objective"
+        layout="@layout/layout_answer_objective_file" />
+    <!--主观题答案-->
+    <include
+        android:id="@+id/ic_answer_subjectivity"
+        layout="@layout/layout_answer_subjectivity_file" />
+
+    <RelativeLayout
+        android:id="@+id/rl_clickItem"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_margin_47dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/common_margin_17dp">
+
+        <LinearLayout
+            android:id="@+id/ll_item_subject_look"
+            style="@style/ll_bg_grayorgreen_style">
+
+            <ImageView
+                android:layout_width="@dimen/common_margin_18dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/common_margin_12dp"
+                android:background="@mipmap/listen" />
+
+            <TextView
+                style="@style/text_18_wrap"
+                android:layout_marginLeft="3dp"
+                android:text="看解析"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_item_subject_teachcomment"
+            style="@style/ll_bg_grayorgreen_style"
+            android:layout_marginLeft="33dp"
+            android:layout_toRightOf="@id/ll_item_subject_look"
+            android:gravity="center">
+
+
+            <TextView
+                style="@style/text_18_wrap"
+                android:text="教师评语"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_subject_rightanswer"
+            style="@style/ll_bg_grayorgreen_style"
+            android:layout_marginLeft="33dp"
+            android:layout_toRightOf="@id/ll_item_subject_teachcomment"
+            android:gravity="center">
+
+
+            <TextView
+                style="@style/text_18_wrap"
+                android:text="正确答案"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_subject_addFalse"
+            style="@style/ll_bg_grayorgreen_style"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/common_margin_20dp"
+            android:background="@drawable/drawable_green_bg">
+
+            <ImageView
+                android:id="@+id/iv_item_subject_false"
+                android:layout_width="@dimen/common_margin_18dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/common_margin_12dp"
+                android:background="@mipmap/addfalse" />
+
+            <TextView
+                style="@style/text_18_wrap"
+                android:layout_marginLeft="3dp"
+                android:text="错题集"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

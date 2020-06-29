@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_answer"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_margin_50dp"
+    tools:showIn="@layout/item_subject_file">
+
+    <TextView
+        android:id="@+id/tv_myanswer_str"
+        style="@style/text_18_wrap"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="11dp"
+        android:text="我的答案 :" />
+
+    <TextView
+        android:id="@+id/tv_myanswer"
+        style="@style/text_18_wrap"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@id/tv_myanswer_str"
+        android:text="B" />
+
+    <TextView
+        android:id="@+id/tv_sureanswer_str"
+        style="@style/text_18_wrap"
+        android:layout_marginLeft="114dp"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@id/tv_myanswer"
+        android:text="正确答案 :" />
+
+    <TextView
+        android:id="@+id/tv_sureanswer"
+        style="@style/text_18_wrap"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@id/tv_sureanswer_str"
+        android:text="B" />
+
+    <ImageView
+        android:id="@+id/iv_explain_object"
+        android:layout_width="@dimen/common_margin_27dp"
+        android:layout_height="@dimen/common_margin_27dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/common_margin_20dp"
+        android:background="@drawable/select_question" />
+
+    <ImageView
+        android:id="@+id/ll_item_subject_listen"
+        android:layout_width="@dimen/common_margin_27dp"
+        android:layout_height="@dimen/common_margin_27dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="67dp"
+        android:background="@drawable/select_play" />
+
+</RelativeLayout>

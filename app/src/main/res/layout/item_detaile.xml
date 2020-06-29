@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="143dp"
+    android:layout_marginBottom="@dimen/common_margin_10dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_item_detaile_img"
+        android:layout_width="125dp"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/common_margin_34dp"
+        android:background="@mipmap/default_icon" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="77dp"
+        android:layout_marginTop="@dimen/margin_29dp"
+        android:layout_toRightOf="@id/iv_item_detaile_img"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_item_detaile_name"
+            style="@style/text_18_wrap"
+            android:text="第一节集合导学资料.doc" />
+
+        <TextView
+            android:id="@+id/tv_item_detaile_creatman"
+            style="@style/text_18_wrap"
+            android:layout_marginTop="@dimen/common_margin_17dp"
+            android:text="创建人"
+            android:textColor="@color/gray_8033" />
+
+        <TextView
+            android:id="@+id/tv_item_detaile_starttime"
+            style="@style/text_18_wrap"
+            android:layout_marginTop="@dimen/common_margin_10dp"
+            android:text="截止时间:2019.12.12"
+            android:textColor="@color/gray_8033" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_submitState"
+        style="@style/text_18_wrap"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="220dp"
+        android:text="提交"
+        android:textColor="@color/gray_8888" />
+
+    <TextView
+        android:id="@+id/tv_down"
+        android:layout_width="100dp"
+        android:layout_height="33dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="67dp"
+        android:background="@drawable/drawable_down_bg"
+        android:gravity="center"
+        android:text="下载"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_18sp" />
+
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="33dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="67dp">
+
+        <com.zwyl.myhomework.util.MyProgress
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:max="100"
+            android:progressDrawable="@drawable/drawable_progressbar"
+            android:visibility="gone" />
+    </FrameLayout>
+</RelativeLayout>

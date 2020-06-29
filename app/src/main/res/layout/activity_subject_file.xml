@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_efef">
+
+    <include
+        android:id="@+id/ic_split"
+        layout="@layout/style_split_screen" />
+
+    <include
+        android:id="@+id/ic_full"
+        layout="@layout/style_full_screen"
+        android:visibility="gone" />
+</RelativeLayout>

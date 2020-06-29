@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="@drawable/bg_frame_item_gray"
+    android:orientation="vertical"
+    android:padding="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_margin_47dp"
+        android:background="@color/gray_efef"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_item_subject_type"
+            style="@style/text_18_wrap"
+            android:layout_marginLeft="17dp" />
+
+        <TextView
+            android:id="@+id/tv_item_subject_name"
+            style="@style/text_18_wrap"
+            android:layout_marginLeft="@dimen/common_margin_28dp"
+            android:layout_toRightOf="@id/tv_item_subject_type"
+            android:text="2018高一数学"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_item_subject_time"
+            style="@style/text_18_wrap"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/common_margin_18dp"
+            android:text="时间 "
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@mipmap/textbook" />-->
+    <com.zwyl.myhomework.views.MyScrollView
+        android:id="@+id/myscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/white">
+
+        <WebView
+            android:id="@+id/webView_participation_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="WebViewLayout" />
+    </com.zwyl.myhomework.views.MyScrollView>
+    <!--<com.zwyl.myhomework.util.MyScrollView-->
+    <!--android:id="@+id/myscrollview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="250dp"-->
+    <!--android:background="@color/white">-->
+
+    <!--<WebView-->
+    <!--android:id="@+id/webView_participation_detail"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--tools:ignore="WebViewLayout" />-->
+    <!--</com.zwyl.myhomework.util.MyScrollView>-->
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_efef"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/tv_answer_click"
+        style="@style/text_18_wrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_efef"
+        android:paddingLeft="21dp"
+        android:paddingTop="11dp"
+        android:text="作答 : 点击此处开始作答"
+        android:visibility="gone" />
+    <!--客观题答案-->
+    <include
+        android:id="@+id/ic_answer_objective"
+        layout="@layout/layout_answer_objective" />
+    <!--主观题答案-->
+    <include
+        android:id="@+id/ic_answer_subjectivity"
+        layout="@layout/layout_answer_subjectivity" />
+
+    <include
+        android:id="@+id/ic_exercise_answer"
+        layout="@layout/layout_exerciseanswer_subject" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom_subject"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_margin_47dp"
+        android:background="@color/gray_efef"
+        android:gravity="center"
+        android:paddingLeft="@dimen/common_margin_17dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/ll_item_subject_listen"
+            style="@style/ll_bg_grayorgreen_style">
+
+            <ImageView
+                android:layout_width="@dimen/common_margin_18dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/common_margin_12dp"
+                android:background="@mipmap/listen" />
+
+            <TextView
+                style="@style/text_18_wrap"
+                android:layout_marginLeft="3dp"
+                android:text="听讲解"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_item_subject_look"
+            style="@style/ll_bg_grayorgreen_style"
+            android:layout_marginLeft="33dp"
+            android:layout_toRightOf="@id/ll_item_subject_listen">
+
+            <ImageView
+                android:layout_width="@dimen/common_margin_18dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/common_margin_12dp"
+                android:background="@mipmap/look" />
+
+            <TextView
+                style="@style/text_18_wrap"
+                android:layout_marginLeft="3dp"
+                android:text="看解析"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_subject_remark"
+            style="@style/ll_bg_grayorgreen_style"
+            android:layout_marginLeft="33dp"
+            android:layout_toRightOf="@id/ll_item_subject_look"
+            android:gravity="center">
+
+            <TextView
+                style="@style/text_18_wrap"
+                android:layout_marginLeft="3dp"
+                android:text="教师评语"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_subject_sure"
+            style="@style/ll_bg_grayorgreen_style"
+            android:layout_marginLeft="33dp"
+            android:layout_toRightOf="@id/ll_item_subject_remark"
+            android:gravity="center">
+
+            <TextView
+                style="@style/text_18_wrap"
+                android:layout_marginLeft="3dp"
+                android:text="正确答案"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_subject_addFalse"
+            style="@style/ll_bg_grayorgreen_style"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="137dp">
+
+            <ImageView
+                android:id="@+id/iv_item_subject_false"
+                android:layout_width="@dimen/common_margin_18dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/common_margin_12dp"
+                android:background="@mipmap/addfalse" />
+
+            <TextView
+                style="@style/text_18_wrap"
+                android:layout_marginLeft="3dp"
+                android:text="错题集"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_subject_down"
+            style="@style/ll_bg_grayorgreen_style"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/common_margin_17dp"
+            android:background="@drawable/drawable_down_bg">
+
+            <ImageView
+                android:layout_width="@dimen/common_margin_18dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/common_margin_12dp"
+                android:background="@mipmap/wenhao" />
+
+            <TextView
+                android:id="@+id/tv_item_subject_down"
+                style="@style/text_18_wrap"
+                android:layout_marginLeft="3dp"
+                android:text="求讲解"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_item_subject_explain"
+        style="@style/ll_bg_grayorgreen_style"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_margin="@dimen/common_margin_12dp"
+        android:background="@drawable/drawable_down_bg">
+
+        <ImageView
+            android:layout_width="@dimen/common_margin_18dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="@dimen/common_margin_12dp"
+            android:background="@mipmap/wenhao" />
+
+        <TextView
+            android:id="@+id/tv_item_subject_explain"
+            style="@style/text_18_wrap"
+            android:layout_marginLeft="3dp"
+            android:text="求讲解"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>
